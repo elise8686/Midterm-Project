@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>claude產生</title>
+    <link rel="stylesheet" href="css/stylelist-claude.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Cama Booking</div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">租借空間</a>
+            <a href="#" class="nav-item">預約清單</a>
+            <a href="#" class="nav-item">歷史紀錄</a>
+        </nav>
+        <div class="user-avatar">🐶</div>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">預約空間</h1>
+
+        <div class="view-controls">
+            <button class="view-btn active">≡</button>
+            <button class="view-btn">清單</button>
+            <button class="view-btn">📅</button>
+            <button class="view-btn">平面圖</button>
+        </div>
+
+        <div class="search-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">預約空間名稱</label>
+                    <input type="text" class="form-input" placeholder="輸入關鍵字搜尋請字...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">日期</label>
+                    <input type="text" class="form-input" placeholder="mm/dd/yyyy">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">時段</label>
+                    <input type="text" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">時段</label>
+                    <input type="text" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="dropdown-select">
+                        <button class="dropdown-btn">
+                            篩選 <span>▼</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="filter-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="building-a">
+                            <label for="building-a">A 棟</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="floor-1-5">
+                            <label for="floor-1-5">1 - 5 F</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="building-b">
+                            <label for="building-b">B 棟</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="floor-6-10">
+                            <label for="floor-6-10">6 - 10 F</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="building-c">
+                            <label for="building-c">C 棟</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="floor-11-15">
+                            <label for="floor-11-15">11 - 15 F</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="building-d">
+                            <label for="building-d">D 棟</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="floor-16-20">
+                            <label for="floor-16-20">16 - 20 F</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>容納人數</h4>
+                    <div class="capacity-inputs">
+                        <input type="text" class="capacity-input" placeholder="容納人數">
+                        <input type="text" class="capacity-input" placeholder="容納人數">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="projector">
+                            <label for="projector">✓ 投影設備</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="microphone">
+                            <label for="microphone">🎤 視訊設備</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="whiteboard">
+                            <label for="whiteboard">📋 白板/黑板</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">☐ Checkbox</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="search-btn">🔍 搜尋</button>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <div class="results-title">搜尋結果</div>
+                <div class="results-count">9 Spaces found</div>
+            </div>
+
+            <div class="favorite-section">
+                <div class="section-header">
+                    <span class="star-icon">⭐</span>
+                    推薦
+                </div>
+
+                <div class="room-item">
+                    <div class="room-image"></div>
+                    <div class="room-info">
+                        <div class="room-name">大型會議室 A3</div>
+                        <div class="room-details">A棟, 3F<br>可容納人數：12人</div>
+                    </div>
+                    <div class="room-time">09:00 - 17:00</div>
+                    <button class="book-btn">預約</button>
+                </div>
+
+                <div class="room-item">
+                    <div class="room-image"></div>
+                    <div class="room-info">
+                        <div class="room-name">會議室 B7</div>
+                        <div class="room-details">B棟, 2F<br>可容納人數：5人</div>
+                    </div>
+                    <div class="room-time">10:00 - 16:00</div>
+                    <button class="book-btn">預約</button>
+                </div>
+            </div>
+
+            <div class="other-section">
+                <div class="section-header">其他空間</div>
+
+                <div class="room-item">
+                    <div class="room-image"></div>
+                    <div class="room-info">
+                        <div class="room-name">學習空間 C1</div>
+                        <div class="room-details">C棟, 1F<br>可容納人數：4人</div>
+                    </div>
+                    <div class="room-time">14:00 - 18:00</div>
+                    <button class="book-btn">預約</button>
+                </div>
+
+                <div class="room-item">
+                    <div class="room-image"></div>
+                    <div class="room-info">
+                        <div class="room-name">會議廳 D15</div>
+                        <div class="room-details">D棟, 1F<br>可容納人數：50人</div>
+                    </div>
+                    <div class="room-time">14:00 - 18:00</div>
+                    <button class="book-btn candidate">候補</button>
+                </div>
+
+                <div class="room-item">
+                    <div class="room-image"></div>
+                    <div class="room-info">
+                        <div class="room-name">大型會議室 D8</div>
+                        <div class="room-details">C棟, 1F<br>可容納人數：10人</div>
+                    </div>
+                    <div class="room-time">14:00 - 18:00</div>
+                    <button class="book-btn candidate">候補</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple dropdown functionality
+        document.querySelector('.dropdown-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Toggle dropdown logic would go here
+            console.log('Dropdown clicked');
+        });
+
+        // Search button functionality
+        document.querySelector('.search-btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log('Search button clicked');
+        });
+
+        // Book button functionality
+        document.querySelectorAll('.book-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                console.log('Book button clicked for:', this.closest('.room-item').querySelector('.room-name').textContent);
+            });
+        });
+    </script>
+</body>
+
+</html>

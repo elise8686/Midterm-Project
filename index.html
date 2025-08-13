@@ -15,25 +15,228 @@
 </head>
 
 <body>
-    <header class="container">
-        <div class="logo">
-            <img src="img/logo.png" alt="logo"><span>Cama Booking</span>
-        </div>
-        <nav>
-            <ul>
-                <li-4></li-4>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+            <div class="container">
+                <a class="navbar-brand font-2 b9" href="#">
+                    <img src="img/logo.png" alt="logo" class="me-12px">Cama Booking
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item me-64px">
+                            <a class="nav-link font-3 b9" href="#">租借空間</a>
+                        </li>
+                        <li class="nav-item me-64px">
+                            <a class="nav-link font-3 b9" href="#">預約清單</a>
+                        </li>
+                        <li class="nav-item me-64px">
+                            <a class="nav-link font-3 b9" href="#">歷史紀錄</a>
+                        </li>
+                    </ul>
+                    <div class="rounded-circle overflow-hidden headshot">
+                        <img src="img/cama.jpg" alt="headshot" class="w-100 h-100v object-fit-cover">
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-    <main class="container">
-        b
+
+    <main class="container mt-60px">
+        <div class="d-flex align-items-center mb-3">
+            <h1 class="font-1 b9 d-inline ms-10px">預約空間</h1>
+            <div class="btn-group mb-3 ms-auto" role="group" aria-label="View switch">
+                <button type="button" class="btn btn-outline-primary active" id="listViewBtn">清單</button>
+                <button type="button" class="btn btn-outline-primary" id="mapViewBtn">平面圖</button>
+            </div>
+        </div>
+
+        <!-- 條列式視圖 -->
+        <div id="listView" class="w-100 bdg5 rounded-2 p-3">
+            <div class="row">
+                <div class="col-md">
+                    <label for="space" class="form-label font-4 b9">預約空間名稱</label>
+                    <div class="position-relative">
+                        <input type="text" id="space" class="form-control bdb8">
+                        <button class="btn position-absolute top-50 end-0 translate-middle-y border-0 bg-transparent"
+                            type="button" id="clearSpace">×</button>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <label for="date" class="form-label font-4 b9">日期</label>
+                    <input type="date" id="date" class="form-control bdb8">
+                </div>
+                <div class="col-md">
+                    <label for="time1" class="form-label font-4 b9">時段</label>
+                    <input type="time" id="time1" class="form-control bdb8">
+                </div>
+                <div class="col-md">
+                    <label for="time2" class="form-label font-4 b9">時段</label>
+                    <input type="time" id="time2" class="form-control bdb8">
+                </div>
+            </div>
+            <div class="rounded-2 bdb8 b8 p-1 d-inline-flex">
+                <span class="me-4"><i class="fa-solid fa-filter"></i></span>
+                <span class="font-5 me-4">篩選</span>
+                <button class="b8 btn p-0 border-0 bg-transparent" data-bs-toggle="collapse" href="#collapsefilter"
+                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <span class=""><i class="fa-solid fa-greater-than"></i></span>
+                </button>
+            </div>
+            <div class="collapse w-49" id="collapsefilter">
+                <div class="card card-body bdb8 w-100">
+                    <div class="row">
+                        <div class="col-md-3 bdeb8">
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    A 棟
+                                </label>
+                            </div>
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    B 棟
+                                </label>
+                            </div>
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    C 棟
+                                </label>
+                            </div>
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    D 棟
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 bdeb8">
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    1-5 F
+                                </label>
+                            </div>
+
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    6-10 F
+                                </label>
+                            </div>
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    11-15 F
+                                </label>
+                            </div>
+                            <div class="form-check p-2 ms-4">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    16-20 F
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="flex-fill">
+                                    <label for="people1" class="form-label font-body b9">容納人數</label>
+                                </div>
+                                <div class="flex-fill">
+                                    <label for="people2" class="form-label font-body b9">容納人數</label>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 bdbb8">
+                                <div class="flex-fill">
+                                    <div class="position-relative">
+                                        <input type="text" id="people1" class="form-control bdb8">
+                                        <button class="btn position-absolute top-50 end-0 translate-middle-y border-0"
+                                            type="button" id="clearpeople1">×</button>
+                                    </div>
+                                </div>
+                                <span class="font-over-line mb-3">—</span>
+                                <div class="flex-fill">
+                                    <div class="position-relative">
+                                        <input type="text" id="people2" class="form-control bdb8">
+                                        <button class="btn position-absolute top-50 end-0 translate-middle-y border-0"
+                                            type="button" id="clearpeople2">×</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">3</div>
+                        <div class="col-6">4</div>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- 平面圖視圖 -->
+        <div id="mapView" style="display: none;">
+            <p>這裡是平面圖的內容</p>
+        </div>
     </main>
     <footer>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+
+        </script>
+    <script>
+        // 等 DOM 準備好再綁定（保險）
+        document.addEventListener('DOMContentLoaded', function () {
+            const listBtn = document.getElementById('listViewBtn');
+            const mapBtn = document.getElementById('mapViewBtn');
+            const list = document.getElementById('listView');
+            const map = document.getElementById('mapView');
+
+            listBtn.addEventListener('click', function () {
+                list.style.display = 'block';
+                map.style.display = 'none';
+                listBtn.classList.add('active');
+                mapBtn.classList.remove('active');
+            });
+
+            mapBtn.addEventListener('click', function () {
+                list.style.display = 'none';
+                map.style.display = 'block';
+                mapBtn.classList.add('active');
+                listBtn.classList.remove('active');
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('clearSpace').addEventListener('click', function () {
+            document.getElementById('space').value = '';
+        });
+    </script>
+    <script>
+        document.getElementById('clearpeople1').addEventListener('click', function () {
+            document.getElementById('people1').value = '';
+        });
+    </script>
+    <script>
+        document.getElementById('clearpeople2').addEventListener('click', function () {
+            document.getElementById('people2').value = '';
+        });
+    </script>
 </body>
 
 </html>

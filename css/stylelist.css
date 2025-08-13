@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+HK:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1 {
+.font-1 {
     font-family: Inter;
     font-size: 36px;
     font-style: normal;
@@ -13,7 +15,7 @@ h1 {
 
 }
 
-h2 {
+.font-2 {
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -21,12 +23,306 @@ h2 {
     line-height: 24px;
 }
 
-.container {
-    max-width: 1440px;
-    width: 90%;
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 0 0;
+.font-3 {
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.font-4 {
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.font-5 {
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.font-Subtitle-Bold {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem;
+}
+
+.font-Subtitle {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.font-body {
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.font-Body-Bold {
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+.font-BUTTON-1 {
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem;
+    /* 100% */
+    letter-spacing: 0.01875rem
+}
+
+.font-BUTTON-2 {
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.0125rem;
+}
+
+.font-over-line {
+    font-family: "Open Sans";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.00938rem;
+}
+
+.b1 {
+    color: #E4F2FC
+}
+
+.b2 {
+    color: #BEDFF8
+}
+
+.b3 {
+    color: #97CCF4
+}
+
+.b4 {
+    color: #71B8EF
+}
+
+.b5 {
+    color: #56A8EC
+}
+
+.b6 {
+    color: #419AE9
+}
+
+.b7 {
+    color: #3A8CDB
+}
+
+.b8 {
+    color: #2C6AB7
+}
+
+.b9 {
+    color: #1E4C99
+}
+
+.g1 {
+    color: #737373
+}
+
+.g2 {
+    color: #A3A3A3
+}
+
+.g3 {
+    color: #BDBDBD
+}
+
+.g4 {
+    color: #D4D4D4
+}
+
+.g5 {
+    color: #E5E5E5
+}
+
+.g6 {
+    color: #EEEEEE
+}
+
+.black02 {
+    color: #404040;
+}
+
+.red {
+    color: #FF5C56;
+}
+
+.bgb1 {
+    background-color: #E4F2FC
+}
+
+.bgb2 {
+    background-color: #BEDFF8
+}
+
+.bgb3 {
+    background-color: #97CCF4
+}
+
+.bgb4 {
+    background-color: #71B8EF
+}
+
+.bgb5 {
+    background-color: #56A8EC
+}
+
+.bgb6 {
+    background-color: #419AE9
+}
+
+.bgb7 {
+    background-color: #3A8CDB
+}
+
+.bgb8 {
+    background-color: #2C6AB7
+}
+
+.bgb9 {
+    background-color: #1E4C99
+}
+
+.bgg1 {
+    background-color: #737373
+}
+
+.bgg2 {
+    background-color: #A3A3A3
+}
+
+.bgg3 {
+    background-color: #BDBDBD
+}
+
+.bgg4 {
+    background-color: #D4D4D4
+}
+
+.bgg5 {
+    background-color: #E5E5E5
+}
+
+.bgg6 {
+    background-color: #EEEEEE
+}
+
+.bgblack02 {
+    background-color: #404040;
+}
+
+.bgred {
+    background-color: #FF5C56;
+}
+
+.bdg5 {
+    border: 1px solid #E5E5E5
+}
+
+.bdb8 {
+    border: 1px solid #2C6AB7
+}
+
+.bdeb8 {
+    border-right: 1px solid #2C6AB7
+}
+
+.bdbb8 {
+    border-bottom: 1px solid #2C6AB7
+}
+
+.w-49 {
+    width: 49%;
+}
+
+.w-97 {
+    width: 97%
+}
+
+.ms-10px {
+    margin-left: .625rem;
+}
+
+.me-12px {
+    margin-right: .75rem;
+}
+
+.me-64px {
+    margin-right: 4rem;
+}
+
+.mt-60px {
+    margin-top: 3.75rem;
+}
+
+.headshot {
+    width: 2rem;
+    height: 2rem;
+}
+
+header {
+    border-bottom: 0.5px solid #E5E5E5;
+}
+
+li {
+    list-style: none;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+/* 清空bs nav的預設 */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 60px;
+}
+
+.navbar-brand,
+.nav-link {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 24px;
+}
+
+/* 清空bs nav的預設 */
+.btn-outline-primary {
+    color: #2C6AB7;
+    border-color: #2C6AB7;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary.active {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+    color: #fff;
 }

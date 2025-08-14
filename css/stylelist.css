@@ -336,6 +336,10 @@ li {
     margin-bottom: 1rem;
 }
 
+.card-hoverb2:hover {
+    background: rgba(190, 223, 248, 0.2);
+}
+
 /* 清空bs nav的預設 */
 .navbar {
     padding-top: 0;
@@ -348,16 +352,80 @@ li {
     padding-top: 14px;
     padding-bottom: 14px;
     line-height: 24px;
+    position: relative;
 }
 
-/* 清空bs nav的預設 */
+/* 清空bs nav的預設end */
+
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:visited,
+.navbar-brand:active {
+    color: #1E4C99
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    /* 靠文字底部 */
+    left: 50%;
+    /* 從中間開始 */
+    transform: translateX(-50%);
+    /* 永遠置中 */
+    width: calc(100% - 30px);
+    /* 比文字多 10px，左右各多 5px */
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover::after {
+    background-color: #1E4C99;
+
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:visited,
+.nav-link:active {
+    color: #1E4C99;
+}
+
+/* 清空.btn-outline-primary的預設 */
 .btn-outline-primary {
     color: #2C6AB7;
     border-color: #2C6AB7;
 }
 
-.btn-outline-primary:hover,
 .btn-outline-primary.active {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+    color: #fff;
+}
+
+/* 清空.btn-outline-secondary 的預設 */
+.btn-outline-secondary {
+    color: #2C6AB7;
+    border-color: #2C6AB7;
+}
+
+.btn-outline-secondary.active {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+}
+
+.btn-outline-secondary:active {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+}
+
+.btn-outline-secondary:hover {
     background-color: #2C6AB7;
     border-color: #2C6AB7;
     color: #fff;
@@ -370,7 +438,10 @@ li {
     color: #fff;
 }
 
-.btn-primary:hover {
-    background-color: #2C6AB7;
-    border-color: #2C6AB7;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:visited,
+.btn-primary:active {
+    background-color: #3A8CDB;
+    border-color: #3A8CDB;
 }

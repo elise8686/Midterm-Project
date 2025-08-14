@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white ">
             <div class="container">
@@ -56,7 +56,7 @@
         </div>
 
         <!-- 條列式視圖 -->
-        <div id="listView" class="w-100 bdg5 rounded-2 p-3">
+        <section id="listView" class="w-100 bdg5 rounded-2 p-3">
             <div class="row">
                 <div class="col-md">
                     <label for="space" class="form-label font-4 b9">預約空間名稱</label>
@@ -88,57 +88,57 @@
                 </button>
             </div>
             <div class="collapse w-49" id="collapsefilter">
-                <div class="card card-body bdb8 w-100">
+                <div class="card card-body bdb8 font-body w-100">
                     <div class="row">
                         <div class="col-md-3 bdeb8">
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="buildA">
+                                <label class="form-check-label" for="buildA">
                                     A 棟
                                 </label>
                             </div>
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="buildB">
+                                <label class="form-check-label" for="buildB">
                                     B 棟
                                 </label>
                             </div>
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="buildC">
+                                <label class="form-check-label" for="buildC">
                                     C 棟
                                 </label>
                             </div>
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="buildD">
+                                <label class="form-check-label" for="buildD">
                                     D 棟
                                 </label>
                             </div>
                         </div>
                         <div class="col-md-3 bdeb8">
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="1-5F">
+                                <label class="form-check-label" for="1-5F">
                                     1-5 F
                                 </label>
                             </div>
 
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="6-10F">
+                                <label class="form-check-label" for="6-10F">
                                     6-10 F
                                 </label>
                             </div>
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="11-15F">
+                                <label class="form-check-label" for="11-15F">
                                     11-15 F
                                 </label>
                             </div>
                             <div class="form-check p-2 ms-4">
-                                <input class="form-check-input bdb8" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input bdb8" type="checkbox" value="" id="16-20F">
+                                <label class="form-check-label" for="16-20F">
                                     16-20 F
                                 </label>
                             </div>
@@ -168,14 +168,38 @@
                                             type="button" id="clearpeople2">×</button>
                                     </div>
                                 </div>
-
                             </div>
-
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check p-2 ms-4">
+                                        <input class="form-check-input bdb8" type="checkbox" value="" id="audio">
+                                        <label class="form-check-label" for="audio">
+                                            影音 / 投影
+                                        </label>
+                                    </div>
+                                    <div class="form-check p-2 ms-4">
+                                        <input class="form-check-input bdb8" type="checkbox" value="" id="audio">
+                                        <label class="form-check-label" for="audio">
+                                            電腦 / 連接
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check p-2 ms-4">
+                                        <input class="form-check-input bdb8" type="checkbox" value="" id="computer">
+                                        <label class="form-check-label" for="computer">
+                                            書寫 / 展示
+                                        </label>
+                                    </div>
+                                    <div class="form-check p-2 ms-4">
+                                        <input class="form-check-input bdb8" type="checkbox" value="" id="computer">
+                                        <label class="form-check-label" for="computer">
+                                            家具 / 其他
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">3</div>
-                        <div class="col-6">4</div>
                     </div>
                 </div>
             </div>
@@ -183,18 +207,126 @@
             <div>
                 <div></div>
             </div>
-        </div>
-        </div>
-        </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
+                <button class="btn btn-primary bgb8 font-BUTTON-1" type="button" id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass me-2"></i>搜尋</button>
+            </div>
+        </section>
+        <section id="results" class="mt-4 d-none w-100 bdg5 rounded-2 p-3" aria-live=" polite">
+            <div class="d-flex flex-column gap-3">
+                <div class="d-flex">
+                    <h4 class="font-4 b9">搜尋結果</h4>
+                    <span class="font-body g3 ms-auto">3 spaces found</span>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                    <div class="red font-Subtitle-Bold"><i class="fa-solid fa-star me-1"></i>推薦
+                    </div>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="card card-body bdb6 rounded-2 p-3 d-flex">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bgg6 w-64px ratio ratio-1x1 rounded-2 overflow-hidden">
+                                    <img src="img/會議室.jpg" alt="大型會議室 A3" class="w-100 h-100v object-fit-cover">
+                                </div>
+                                <div>
+                                    <p class="font-Subtitle-Bold mb-0">大型會議室 A3</p>
+                                    <p class="font-body g1 mb-0">A棟, 3F</p>
+                                    <p class="font-body g1 mb-0">可容納人數：12人</p>
+                                </div>
+                                <div class="g1 font-2 d-flex  align-items-center gap-3 ms-auto">
+                                    <div>09:00 - 17:00</div>
+                                    <a class="btn btn-primary font-2 w-130px h-50px rounded-pill d-flex align-items-center justify-content-center"
+                                        href="#" role="button">預約</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body bdb6 rounded-2 p-3 d-flex">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bgg6 w-64px ratio ratio-1x1 rounded-2 overflow-hidden">
+                                    <img src="img/會議室.jpg" alt="會議室 B7" class="w-100 h-100v object-fit-cover">
+                                </div>
+                                <div>
+                                    <p class="font-Subtitle-Bold mb-0">會議室 B7</p>
+                                    <p class="font-body g1 mb-0">B棟, 2F</p>
+                                    <p class="font-body g1 mb-0">可容納人數：5人</p>
+                                </div>
+                                <div class="g1 font-2 d-flex  align-items-center gap-3 ms-auto">
+                                    <div>10:00 - 16:00</div>
+                                    <a class="btn btn-primary font-2 w-130px h-50px rounded-pill d-flex align-items-center justify-content-center"
+                                        href="#" role="button">預約</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-3">
+                    <div class="font-Subtitle-Bold">其他空間</div>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="card card-body bdb6 rounded-2 p-3 d-flex">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bgg6 w-64px ratio ratio-1x1 rounded-2 overflow-hidden">
+                                    <img src="img/會議室.jpg" alt="學習空間 C1" class="w-100 h-100v object-fit-cover">
+                                </div>
+                                <div>
+                                    <p class="font-Subtitle-Bold mb-0">學習空間 C1</p>
+                                    <p class="font-body g1 mb-0">C棟, 1F</p>
+                                    <p class="font-body g1 mb-0">可容納人數：4人</p>
+                                </div>
+                                <div class="g1 font-2 d-flex  align-items-center gap-3 ms-auto">
+                                    <div>14:00 - 18:00</div>
+                                    <a class="btn btn-primary font-2 w-130px h-50px rounded-pill d-flex align-items-center justify-content-center"
+                                        href="#" role="button">預約</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body bdg4 rounded-2 p-3 bgg6-opacity d-flex">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bgg6 w-64px ratio ratio-1x1 rounded-2 overflow-hidden">
+                                    <img src="img/會議室.jpg" alt="會議廳 D15" class="w-100 h-100v object-fit-cover">
+                                </div>
+                                <div>
+                                    <p class="font-Subtitle-Bold g1 mb-0">會議廳 D15</p>
+                                    <p class="font-body g1 mb-0">B棟, 2F</p>
+                                    <p class="font-body g1 mb-0">可容納人數：5人</p>
+                                </div>
+                                <div class="g1 font-2 d-flex  align-items-center gap-3 ms-auto">
+                                    <div>10:00 - 16:00</div>
+                                    <a class="btn btn-outline-primary font-2 w-130px h-50px rounded-pill d-flex align-items-center justify-content-center"
+                                        href="#" role="button">候補</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body bdg4 rounded-2 p-3 bgg6-opacity d-flex">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bgg6 w-64px ratio ratio-1x1 rounded-2 overflow-hidden">
+                                    <img src="img/會議室.jpg" alt="大型會議室 D8" class="w-100 h-100v object-fit-cover">
+                                </div>
+                                <div>
+                                    <p class="font-Subtitle-Bold g1 mb-0">大型會議室 D8</p>
+                                    <p class="font-body g1 mb-0">C棟, 1F</p>
+                                    <p class="font-body g1 mb-0">可容納人數：10人</p>
+                                </div>
+                                <div class="g1 font-2 d-flex  align-items-center gap-3 ms-auto">
+                                    <div>10:00 - 16:00</div>
+                                    <a class="btn btn-outline-primary font-2 w-130px h-50px rounded-pill d-flex align-items-center justify-content-center"
+                                        href="#" role="button">候補</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
         <!-- 平面圖視圖 -->
         <div id="mapView" style="display: none;">
             <p>這裡是平面圖的內容</p>
         </div>
     </main>
-    <footer>
-
+    <footer class="bgb9 mt-auto">
+        <div class="text-center white font-body ls-1 py-1">Camabooking©2025</div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
 
@@ -235,6 +367,13 @@
     <script>
         document.getElementById('clearpeople2').addEventListener('click', function () {
             document.getElementById('people2').value = '';
+        });
+    </script>
+    <script>
+        // 超薄：只負責顯示結果區
+        document.getElementById('searchBtn').addEventListener('click', function () {
+            document.getElementById('results').classList.remove('d-none');
+
         });
     </script>
 </body>

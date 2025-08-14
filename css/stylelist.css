@@ -81,12 +81,11 @@
 
 .font-BUTTON-1 {
     font-family: Inter;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5rem;
-    /* 100% */
-    letter-spacing: 0.01875rem
+    letter-spacing: 0.05rem
 }
 
 .font-BUTTON-2 {
@@ -105,6 +104,10 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.00938rem;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
 }
 
 .b1 {
@@ -175,6 +178,10 @@
     color: #FF5C56;
 }
 
+.white {
+    color: #ffffff;
+}
+
 .bgb1 {
     background-color: #E4F2FC
 }
@@ -235,6 +242,10 @@
     background-color: #EEEEEE
 }
 
+.bgg6-opacity {
+    background-color: rgba(238, 238, 238, 0.4)
+}
+
 .bgblack02 {
     background-color: #404040;
 }
@@ -243,8 +254,16 @@
     background-color: #FF5C56;
 }
 
+.bdg4 {
+    border: 1px solid #D4D4D4
+}
+
 .bdg5 {
     border: 1px solid #E5E5E5
+}
+
+.bdb6 {
+    border: 1px solid #419AE9
 }
 
 .bdb8 {
@@ -267,6 +286,22 @@
     width: 97%
 }
 
+.w-64px {
+    width: 64px;
+}
+
+.w-130px {
+    width: 130px;
+}
+
+.h-50px {
+    height: 50px;
+}
+
+.h-64px {
+    height: 64px;
+}
+
 .ms-10px {
     margin-left: .625rem;
 }
@@ -278,6 +313,7 @@
 .me-64px {
     margin-right: 4rem;
 }
+
 
 .mt-60px {
     margin-top: 3.75rem;
@@ -325,4 +361,16 @@ li {
     background-color: #2C6AB7;
     border-color: #2C6AB7;
     color: #fff;
+}
+
+/* 清空.btn-primary 的預設 */
+.btn-primary {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2C6AB7;
+    border-color: #2C6AB7;
 }

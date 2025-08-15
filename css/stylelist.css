@@ -294,12 +294,20 @@
     width: 130px;
 }
 
+.w-500px {
+    width: 31.25rem;
+}
+
 .h-50px {
     height: 50px;
 }
 
 .h-64px {
     height: 64px;
+}
+
+.h-700px {
+    height: 43.75rem;
 }
 
 .ms-10px {
@@ -338,6 +346,107 @@ li {
 
 .card-hoverb2:hover {
     background: rgba(190, 223, 248, 0.2);
+}
+
+.map-container {
+    height: 70vh;
+    overflow: hidden;
+}
+
+.map-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+}
+
+.map-image {
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hotspot:hover .card {
+    display: block;
+}
+
+/* 畫布外框：裁切可視範圍 */
+.map-wrap {
+    position: relative;
+    height: 70vh;
+    /* 你要的視窗高度 */
+    overflow: hidden;
+    background: #fff;
+    border-radius: .5rem;
+}
+
+/* 內層畫布：整張圖會被 transform 拉動/縮放 */
+.map-canvas {
+    position: absolute;
+    inset: 0;
+    transform-origin: 0 0;
+    /* 以左上角為縮放基準（好算） */
+    cursor: grab;
+}
+
+.map-canvas:active {
+    cursor: grabbing;
+}
+
+
+/* 熱區群組（可移動的定位點） */
+.poi {
+    position: absolute;
+    /* 用百分比定位在圖上 */
+    transform: translate(-50%, -50%);
+    /* 以中心對準 left/top 百分比 */
+}
+
+/* 半透明紅色區域（你說的淺紅） */
+.hotspot {
+    width: 200px;
+    height: 350px;
+    /* 依房間大小調整 */
+    background: rgba(255, 92, 86, .1);
+    transition: box-shadow .15s ease;
+}
+
+
+/* 浮出的卡片（預設隱藏，hover 熱區才顯示） */
+.room-card {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: .75rem;
+    /* 與熱區間距 */
+    width: 360px;
+    background: #fff;
+    border-radius: .5rem;
+    border: 1px solid #eee;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .15s ease, transform .15s ease, visibility 0s .15s;
+    pointer-events: none;
+    /* 只在顯示時可互動，避免擋到拖曳 */
+}
+
+.room-thumb {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* 顯示卡片：滑到紅區 or 卡片本身都要能維持顯示 */
+.poi:hover .room-card,
+.poi:has(.room-card:hover) .room-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity .15s ease, transform .15s ease, visibility 0s;
+    pointer-events: auto;
 }
 
 /* 清空bs nav的預設 */

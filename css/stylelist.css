@@ -254,6 +254,10 @@
     background-color: #FF5C56;
 }
 
+.bgwhite {
+    background-color: #ffffff;
+}
+
 .bdg4 {
     border: 1px solid #D4D4D4
 }
@@ -366,32 +370,7 @@ li {
     pointer-events: none;
 }
 
-.hotspot:hover .card {
-    display: block;
-}
 
-/* 畫布外框：裁切可視範圍 */
-.map-wrap {
-    position: relative;
-    height: 70vh;
-    /* 你要的視窗高度 */
-    overflow: hidden;
-    background: #fff;
-    border-radius: .5rem;
-}
-
-/* 內層畫布：整張圖會被 transform 拉動/縮放 */
-.map-canvas {
-    position: absolute;
-    inset: 0;
-    transform-origin: 0 0;
-    /* 以左上角為縮放基準（好算） */
-    cursor: grab;
-}
-
-.map-canvas:active {
-    cursor: grabbing;
-}
 
 
 /* 熱區群組（可移動的定位點） */
@@ -400,23 +379,28 @@ li {
     /* 用百分比定位在圖上 */
     transform: translate(-50%, -50%);
     /* 以中心對準 left/top 百分比 */
+    left: 80% !important;
+    top: 66% !important;
 }
 
-/* 半透明紅色區域（你說的淺紅） */
 .hotspot {
     width: 200px;
     height: 350px;
     /* 依房間大小調整 */
-    background: rgba(255, 92, 86, .1);
+    /* background: rgba(255, 92, 86, .1); */
     transition: box-shadow .15s ease;
 }
 
+.hotspot:hover .card {
+    display: block;
+}
 
 /* 浮出的卡片（預設隱藏，hover 熱區才顯示） */
 .room-card {
     position: absolute;
     left: 100%;
     top: 0;
+    /* 從父層熱區抓位置 */
     margin-left: .75rem;
     /* 與熱區間距 */
     width: 360px;
@@ -426,20 +410,14 @@ li {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
+    /* 只在顯示時可互動，避免擋到拖曳 */
     transform: translateY(8px);
     transition: opacity .15s ease, transform .15s ease, visibility 0s .15s;
     pointer-events: none;
-    /* 只在顯示時可互動，避免擋到拖曳 */
+    /* 可以點擊 */
 }
 
-.room-thumb {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-/* 顯示卡片：滑到紅區 or 卡片本身都要能維持顯示 */
+/* :has() 是 CSS 的「父選擇器」，讓父元素可以根據子元素的狀態改變樣式。這確保了當使用者想點擊卡片上的按鈕時，卡片不會突然消失 */
 .poi:hover .room-card,
 .poi:has(.room-card:hover) .room-card {
     opacity: 1;
@@ -549,7 +527,7 @@ li {
 
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:visited,
+/* .btn-primary:visited, */
 .btn-primary:active {
     background-color: #3A8CDB;
     border-color: #3A8CDB;

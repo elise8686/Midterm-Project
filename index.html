@@ -492,11 +492,12 @@
             <div class="p-0 position-relative map-container">
                 <div id="canvas" class="map-canvas">
                     <img src="img/floor-cover.jpg" class="map-image" alt="平面圖" draggable="false">
-                    <!-- 一個可定位的點（poi），把熱區與卡片包在一起 -->
-                    <div class="poi" style="left:250px; top:120px;">
+                    <div class="poi">
                         <div class="hotspot"></div>
                         <div class="room-card">
-                            <img src="/img/會議室.jpg" alt="大型會議室 A3" class="room-thumb">
+                            <div class="ratio ratio-16x9 overflow-hidden">
+                                <img src="img/會議室.jpg" alt="大型會議室 A3" class="object-fit-cover">
+                            </div>
                             <div class="p-4">
                                 <h5 class="card-title font-2 b8 mb-2">大型會議室 A3</h5>
                                 <div class="d-flex flex-column gap-2">
